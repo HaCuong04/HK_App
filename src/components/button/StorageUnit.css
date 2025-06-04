@@ -1,0 +1,35 @@
+.custom-vertical-button {
+    margin: 26px 30px;
+    width: 297px !important;
+    height: 161px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: #ffffff !important;
+    border: #ffffff;
+    border-radius: 18px;
+}
+
+.vertical-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-icon-img {
+    width: 166px;
+    height: 166px;
+    margin-bottom: -12px;
+    margin-top: -25px;
+}
+
+.button-title {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    text-align: center;
+    margin-top: -10px;
+}

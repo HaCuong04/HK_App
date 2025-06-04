@@ -1,6 +1,10 @@
+import { Link } from "react-router-dom";
+
 function RegisterPage() {
     return ( 
-        <div></div>
+        <div>
+            <Link to="/">home</Link>
+        </div>
      );
 }
 

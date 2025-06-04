@@ -1,0 +1,43 @@
+.customer-button {
+    margin: 26px 50px;
+    width: 297px !important;
+    height: 161px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: linear-gradient(180deg, #EC3515 0%, #673C48 100%) !important;
+    border: #EC3515;
+    border-radius: 18px;
+}
+
+.customer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.customer-button-icon-img {
+    width: 166px;
+    height: 166px;
+    margin-bottom: -12px;
+    margin-top: -25px;
+}
+
+.customer-button-title {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.customer-complain {
+    border-radius: 20px;
+}
+
+.p-dialog-title{
+    margin-top: 20px;
+}
