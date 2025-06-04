@@ -41,3 +41,35 @@
 .p-dialog-title{
     margin-top: 20px;
 }
+
+.p-datatable .p-datatable-thead > tr > th {
+    background: #EAEAEA;
+    font-weight: bold;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page {
+    background: transparent !important;
+    color: #232323 !important;
+    border-radius: 8px !important;
+    margin: 0 2px;
+    min-width: 32px;
+    height: 32px;
+    display: row;
+    justify-content: center;
+    font-weight: 400;
+    transition: background 0.2s;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    background: #232323 !important;
+    color: #fff !important;
+    font-weight: bold;
+}

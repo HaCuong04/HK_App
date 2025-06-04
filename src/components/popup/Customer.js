@@ -32,98 +32,98 @@ function Customer() {
             id: '', 
             name: 'Phạm Hương Giang', 
             complaint: 'Sợi lẫn màu tạp', 
-            date: '1/1/2025',
+            date: '2/1/2025',
             status: 'Chưa xử lý' 
         },
         { 
             id: '', 
             name: 'Lại Văn Đại', 
             complaint: 'Sợi lẫn màu tạp', 
-            date: '1/1/2025',
+            date: '3/1/2025',
             status: 'Chưa xử lý' 
         },
         { 
             id: '', 
             name: 'Hoàng khánh Hòa', 
             complaint: 'Sợi lẫn màu tạp', 
-            date: '1/1/2025',
+            date: '4/1/2025',
             status: 'Chưa xử lý' 
         },
         { 
             id: '', 
             name: 'Nguyễn Chí Công', 
             complaint: 'Sợi lẫn màu tạp', 
-            date: '1/1/2025',
+            date: '5/1/2025',
             status: 'Chưa xử lý' 
         },
         { 
             id: '', 
             name: 'Hà Gia Kính', 
             complaint: 'Sợi lẫn màu tạp', 
-            date: '1/1/2025',
+            date: '6/1/2025',
             status: 'Chưa xử lý' 
         },
         { 
             id: '', 
             name: 'Phạm Hương Giang', 
             complaint: 'Sợi lẫn màu tạp', 
-            date: '1/1/2025',
+            date: '7/1/2025',
             status: 'Chưa xử lý' 
         },
         { 
             id: '', 
             name: 'Lại Văn Đại', 
             complaint: 'Sợi lẫn màu tạp', 
-            date: '1/1/2025',
+            date: '8/1/2025',
             status: 'Chưa xử lý' 
         },
         { 
             id: '', 
             name: 'Hoàng khánh Hòa', 
             complaint: 'Sợi lẫn màu tạp', 
-            date: '1/1/2025',
+            date: '9/1/2025',
             status: 'Chưa xử lý' 
         },
         { 
             id: '', 
             name: 'Nguyễn Chí Công', 
             complaint: 'Sợi lẫn màu tạp', 
-            date: '1/1/2025',
+            date: '10/1/2025',
             status: 'Chưa xử lý' 
         },
         { 
             id: '', 
             name: 'Hà Gia Kính', 
             complaint: 'Sợi lẫn màu tạp', 
-            date: '1/1/2025',
+            date: '11/1/2025',
             status: 'Chưa xử lý' 
         },
         { 
             id: '', 
             name: 'Phạm Hương Giang', 
             complaint: 'Sợi lẫn màu tạp', 
-            date: '1/1/2025',
+            date: '12/1/2025',
             status: 'Chưa xử lý' 
         },
         { 
             id: '', 
             name: 'Lại Văn Đại', 
             complaint: 'Sợi lẫn màu tạp', 
-            date: '1/1/2025',
+            date: '13/1/2025',
             status: 'Chưa xử lý' 
         },
         { 
             id: '', 
             name: 'Hoàng khánh Hòa', 
             complaint: 'Sợi lẫn màu tạp', 
-            date: '1/1/2025',
+            date: '14/1/2025',
             status: 'Chưa xử lý' 
         },
         { 
             id: '', 
             name: 'Nguyễn Chí Công', 
             complaint: 'Sợi lẫn màu tạp', 
-            date: '1/1/2025',
+            date: '15/1/2025',
             status: 'Chưa xử lý' 
         }
     ];
@@ -159,9 +159,9 @@ function Customer() {
                     filters={filters}
                     paginator
                     rows={5}
+                    paginatorTemplate="PageLinks"
                     tableStyle={{ minWidth: '50rem' }}
                 >
-
                     <Column field="id" header="STT" />
                     <Column field="name" header="Khách hàng" />
                     <Column field="complaint" header="Nội dung" />
