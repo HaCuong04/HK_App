@@ -1,4 +1,4 @@
-import "./Storage.css";
+import "./css/Storage.css";
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import "primereact/resources/primereact.min.css";
 

@@ -1,4 +1,4 @@
-import "./Machine.css";
+import "./css/Machine.css";
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import "primereact/resources/primereact.min.css";
 

@@ -1,18 +1,18 @@
-import "./Customer.css";
+import "./css/Customer.css";
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import "primereact/resources/primereact.min.css";
 
 import icon from "../../assets/images/customer.png";
+import SeachBar from "../searchbar/SearchBar";
 
 import { useState } from "react";
 import { FilterMatchMode } from "primereact/api";
-import { InputText } from "primereact/inputtext";
 
 import{ Dialog } from "primereact/dialog";
 import { Button } from "primereact/button";
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
-        
+
 
 function Customer() {
     const [visible, setVisible] = useState(false);
@@ -142,18 +142,23 @@ function Customer() {
             <Dialog 
                 visible={visible} 
                 onHide={() => setVisible(false)} 
-                header="Bảng theo dõi thông tin khiếu nại" 
                 className="customer-complain"
                 draggable={false}
                 dismissableMask
             >
-                <InputText
-                    type="text"
-                    placeholder="Tìm kiếm..."
-                    onInput={(e) => setFilters({ ...filters, global: { value: e.target.value, matchMode: FilterMatchMode.CONTAINS } })}
-                    className="p-inputtext-sm p-datatable-filter"
-                />
-                <DataTable 
+                <div className="customer-header">
+                    <span className="customer-title">Bảng theo dõi thông tin khiếu nại</span>
+                    <SeachBar 
+                        value={filters.global?.value || ""}
+                        onInput={(e) =>
+                            setFilters({
+                                ...filters,
+                                global: { value: e.target.value, matchMode: FilterMatchMode.CONTAINS }
+                            })
+                        }
+                    />
+                </div>
+                <DataTable
                     value={customer} 
                     className="p-datatable-striped" 
                     filters={filters}
@@ -161,6 +166,7 @@ function Customer() {
                     rows={5}
                     paginatorTemplate="PageLinks"
                     tableStyle={{ minWidth: '50rem' }}
+                    emptyMessage={<br />}
                 >
                     <Column field="id" header="STT" />
                     <Column field="name" header="Khách hàng" />

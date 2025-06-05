@@ -1,0 +1,161 @@
+.customer-button {
+    margin: 26px 50px;
+    width: 297px !important;
+    height: 161px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: linear-gradient(180deg, #EC3515 0%, #673C48 100%) !important;
+    border: #EC3515;
+    border-radius: 18px;
+}
+
+.customer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.customer-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin: 0px 25px 20px 25px;
+}
+
+.customer-button-icon-img {
+    width: 166px;
+    height: 166px;
+    margin-bottom: -12px;
+    margin-top: -25px;
+}
+
+.customer-button-title {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.customer-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #232323;
+    text-align: left;
+    margin-left: 8px;
+}
+
+.p-dialog-content {
+    border-radius: 20px;
+    height: calc(524px - 60px) !important; /* Adjust for header/footer if needed */
+    max-height: calc(524px - 60px) !important;
+    overflow-y: auto;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+    background: #EAEAEA;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+    font-size: 1rem;
+    background-color: #fff;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.p-paginator-pages .p-paginator-page {
+    background: transparent !important;
+    color: #232323 !important;
+    border-radius: 8px !important;
+    margin: 0 2px;
+    min-width: 32px;
+    height: 32px;
+    display: row;
+    justify-content: center;
+    font-weight: 400;
+    transition: background 0.2s;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.p-paginator-pages .p-paginator-page.p-highlight {
+    background: #232323 !important;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.p-datatable-header {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.p-datatable-header{
+    padding-right: -60px;
+}
+
+.p-dialog-header {   /* Reduce padding */
+    min-height: 32px !important;     /* Reduce min height */
+    height: 110px !important;   
+    border-radius: 20px;     /* Set a fixed height if needed */
+    margin-bottom: -50px; /* Adjust margin to fit your design */
+}
+
+.p-dialog {   /* Reduce padding */
+    min-height: 32px !important;     /* Reduce min height */
+    height: 120px !important;   
+    border-radius: 20px;     /* Set a fixed height if needed */
+    margin-bottom: 10px; /* Adjust margin to fit your design */
+    width: 1036px !important;
+    max-width: 1036px !important;
+    height: 505px !important;
+    max-height: 524px !important;
+}
+
+.p-paginator {
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+
+.p-dialog-header-icon.p-dialog-header-close.p-link {
+    margin-top: -15px !important;
+}
+
+.p-column-title {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 13px !important;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+}
+
+.p-datatable .p-datatable-thead > tr > th,
+.p-datatable .p-datatable-tbody > tr > td {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    height: 50px !important; /* Optional: set a fixed height */
+}
+
+.p-datatable-wrapper{
+    margin-left: 30px !important;
+}
