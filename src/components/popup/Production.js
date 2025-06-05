@@ -3,6 +3,7 @@ import "primereact/resources/themes/lara-light-cyan/theme.css";
 import "primereact/resources/primereact.min.css";
 
 import icon from "../../assets/images/production.png";
+import schema from "../../assets/images/schema.png";
 
 import { useState } from "react";
 
@@ -24,7 +25,7 @@ function Production() {
             </div>
             </Button>
             <Dialog visible={visible} onHide={() => setVisible(false)} header="Hành trình sản xuất" modal>
-                <p>Dialog Content</p>
+                <img src={schema} alt="icon" className="button-icon-img" />
             </Dialog>
         </div>
      );

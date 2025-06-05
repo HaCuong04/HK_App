@@ -18,6 +18,12 @@ function Order() {
     const [filters, setFilters] = useState({
         global: { value: null, matchMode: FilterMatchMode.CONTAINS }
     });
+
+    const statusBodyTemplate = (rowData) => (
+        <span style={{ color: rowData.status === "Đang xử lý" ? "#e73e3e" : "#3e49e7" }}>
+            {rowData.status}
+        </span>
+    );
     
     const customer = [
         { 
@@ -60,7 +66,7 @@ function Order() {
             name: 'Hà Gia Kính', 
             complaint: 'PO012 - 10.000Kg', 
             date: '6/1/2025',
-            status: 'Đã xác nhận' 
+            status: 'Đang xử lý' 
         },
         { 
             id: '', 
@@ -116,7 +122,7 @@ function Order() {
             name: 'Hoàng khánh Hòa', 
             complaint: 'PO012 - 10.000Kg', 
             date: '14/1/2025',
-            status: 'Đã xác nhận' 
+            status: 'Đang xử lý' 
         },
         { 
             id: '', 
@@ -171,7 +177,11 @@ function Order() {
                     <Column field="name" header="Khách hàng" />
                     <Column field="complaint" header="Đơn hàng" />
                     <Column field="date" header="Ngày giao" />
-                    <Column field="status" header="Trạng thái" className="status"/>  
+                    <Column 
+                        field="status" 
+                        header="Trạng thái" 
+                        body={statusBodyTemplate}
+                    />  
                 </DataTable>
             </Dialog>
         </div>
