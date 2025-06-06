@@ -5,13 +5,24 @@ import "primereact/resources/primereact.min.css";
 import icon from "../../assets/images/production.png";
 import schema from "../../assets/images/schema.png";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import{ Dialog } from "primereact/dialog";
 import { Button } from "primereact/button";
 
 function Production() {
     const [visible, setVisible] = useState(false);
+
+        useEffect(() => {
+        if (visible) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [visible]);
 
     return ( 
         <div className="button-container">
@@ -24,7 +35,7 @@ function Production() {
                 <span className="button-title">Sản xuất</span>
             </div>
             </Button>
-            <Dialog visible={visible} onHide={() => setVisible(false)} header="Hành trình sản xuất" modal>
+            <Dialog visible={visible} onHide={() => setVisible(false)} modal>
                 <img src={schema} alt="icon" className="button-icon-img" />
             </Dialog>
         </div>

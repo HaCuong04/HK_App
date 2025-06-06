@@ -5,7 +5,7 @@ import "primereact/resources/primereact.min.css";
 import icon from "../../assets/images/order.png";
 import SeachBar from "../searchbar/SearchBar";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FilterMatchMode } from "primereact/api";
 
 import{ Dialog } from "primereact/dialog";
@@ -132,6 +132,17 @@ function Order() {
             status: 'Đã xác nhận' 
         }
     ]
+    
+    useEffect(() => {
+        if (visible) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [visible]); 
 
     return ( 
         <div className="button-container">

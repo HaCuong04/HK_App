@@ -1,5 +1,5 @@
 .custom-vertical-button {
-    margin: 26px 50px;
+    margin: 26px 40px;
     width: 297px !important;
     height: 161px !important;
     display: flex;
@@ -54,8 +54,7 @@
 .img-graph {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
+    object-fit: fill;
 }
 
 .p-dialog-content {
@@ -165,4 +164,37 @@
 
 .p-datatable-wrapper{
     margin-left: 30px !important;
+}
+
+.storage-dialog{
+    height: 1600px !important;
+}
+
+
+.text-box-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #232323;
+    text-align: left;
+    margin-left:20px;
+    margin-bottom: 10px;
+}
+
+.text-box-text {
+    margin-left:20px;
+    font-weight: 600;
+    color: #232323;
+}
+
+.text-box-red{
+    margin-left:20px;
+    font-weight: 600;
+    color: #FF0000;
+}
+
+.st-link{
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-left: 300px;
+    margin-top: 30px;
 }

@@ -3,12 +3,13 @@ import "primereact/resources/themes/lara-light-cyan/theme.css";
 import "primereact/resources/primereact.min.css";
 
 import icon from "../../assets/images/storage.png";
-import graph from "../../assets/images/graph.png";
 import SeachBar from "../searchbar/SearchBar";
+import LineDemo from "../LineChart";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FilterMatchMode } from "primereact/api";
 
+import { Link } from "react-router-dom";
 import{ Dialog } from "primereact/dialog";
 import { Button } from "primereact/button";
 import { DataTable } from 'primereact/datatable';
@@ -134,6 +135,16 @@ function Storage() {
             status: 'Đủ cho 10 ngày' 
         }
     ]
+        useEffect(() => {
+        if (visible) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [visible]);
 
     return ( 
         <div className="button-container">
@@ -149,12 +160,13 @@ function Storage() {
             <Dialog 
                 visible={visible} 
                 onHide={() => setVisible(false)} 
-                className="complain"
+                className="storage-dialog"
                 draggable={false}
                 dismissableMask
             >
                 <div className="header">
                     <span className="st-title">Kho nguyên liệu</span>
+                    <Link to="/" className="st-link">Xem biểu đồ tồn kho</Link>
                     <SeachBar 
                         value={filters.global?.value || ""}
                         onInput={(e) =>
@@ -185,7 +197,13 @@ function Storage() {
                         body={statusBodyTemplate}
                     />  
                 </DataTable>
-                <img src={graph} alt="img" className="img-graph" />
+                <LineDemo/>
+                <div className="text-box">
+                    <p className="text-box-title">Tóm tắt tồn kho nguyên liệu hiện tại:</p> 
+                    <span className="text-box-text">Tồn nhiều nhất:</span>
+                    <span className="text-box-value"> Bông Brazil (5000 kg)</span>
+                    <p className="text-box-red">Tồn ít/thiếu:</p>
+                </div>
             </Dialog>
         </div>
      );
